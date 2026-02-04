@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shekhar Search Engine</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #141e30, #243b55);
+        color: white;
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 180px;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    input {
+        width: 320px;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        background: #ff9800;
+        color: black;
+    }
+
+    button:hover {
+        background: #ffc107;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🔍 Shekhar Search</h1>
+    <p>Search the world, Shekhar style 😎</p>
+
+    <input type="text" id="query" placeholder="Type to search...">
+    <button onclick="searchNow()">Search</button>
+</div>
+
+<script>
+    function searchNow() {
+        let text = document.getElementById("query").value;
+
+        if (text === "") {
+            alert("Shekhar bhai, kuch likho to search ho 😅");
+        } else {
+            window.location.href =
+            "https://www.google.com/search?q=" + encodeURIComponent(text);
+        }
+    }
+</script>
+
+</body>
+</html>
